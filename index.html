@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Geolocation with notifications" />
+    <link rel="stylesheet" href="/node_modules/bulma/css/bulma.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bulma-switch/dist/css/bulma-switch.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+
+    <title>Navigation Exercise</title>
+  </head>
+  <body>
+    <!--  -->
+    <div class="container is-fullhd has-text-centered">
+      <div
+        id="notifications_banner"
+        style="display:none;"
+        class="notification is-info has-text-black"
+      >
+        This app needs your permission to
+        <a type="button" class="button" id="allow-gelocation">
+          enable GPS Location
+        </a>
+        <button type="button" class="delete">
+          Dismiss
+        </button>
+      </div>
+    </div>
+    <header class="hero is-dark">
+      <div class="is-primary hero-body container">
+        <div class="columns">
+          <div class="column is-four-fifths">
+            <h1 class="title">User Localization</h1>
+          </div>
+          <div class="column">
+            <div class="field">
+              <input
+                id="switchRoundedSuccess"
+                type="checkbox"
+                name="switchRoundedSuccess"
+                class="switch is-rounded is-info is-rtl"
+              />
+              <label class="label has-text-white" for="switchRoundedSuccess"
+                >Enable Notifications</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="columns">
+      <div class="column">
+        <section class="section">
+          <div class="container">
+            <label class="label"
+              ><span class="icon is-small">
+                <i class="fas fa-arrows-alt-h" aria-hidden="true"></i
+              ></span>
+              Latitude</label
+            >
+            <p><output class="output" id="lat" value="00.00"></output></p>
+          </div>
+        </section>
+      </div>
+      <div class="column">
+        <section class="section">
+          <div class="container">
+            <Label class="label"
+              ><span class="icon is-small">
+                <i class="fas fa-arrows-alt-v" aria-hidden="true"></i
+              ></span>
+              Longitude</Label
+            >
+            <p><output id="lon" value="00.00"></output></p>
+          </div>
+        </section>
+      </div>
+      <div class="column">
+        <section class="section">
+          <div class="container">
+            <label class="label"
+              ><span class="icon is-small">
+                <i class="fas fa-tachometer-alt" aria-hidden="true"></i
+              ></span>
+              Speed</label
+            >
+            <p><output id="speed" value="00.00"></output></p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="nav-bar.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
